@@ -19,7 +19,7 @@ async fn make_http_calls() -> Result<(), surf::Exception> {
 
     info!("before try_join");
 
-    let results = try_join!(future1, future2);
+    let results = try_join!(future1, future2)?;
 
     info!("make_http_calls got results: {:#?}", results);
 
