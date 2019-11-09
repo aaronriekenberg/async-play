@@ -27,7 +27,7 @@ async fn make_http_calls() -> Result<(), surf::Exception> {
 }
 
 fn main() -> Result<(), surf::Exception> {
-    femme::start(log::LevelFilter::Info)?;
+    env_logger::init();
 
     let future = make_http_calls();
 
